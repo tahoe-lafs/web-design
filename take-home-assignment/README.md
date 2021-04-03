@@ -5,7 +5,7 @@ a better understanding of your approach to open source web development and how
 you might work with the existing Tahoe-LAFS team. Here is the assignment:
 
 1) Fork [https://github.com/tahoe-lafs/web-design](https://github.com/tahoe-lafs/web-design) 
-and create a branch, adding your project in the /take-home-assignment directory 
+and create a branch, adding your project in the `/take-home-assignment` directory
 as a folder with CSS and HTML files. You should build your project in a stepwise 
 manner (DO NOT ADD COMPLETED FILES) and open a PR when you’re ready.
 
