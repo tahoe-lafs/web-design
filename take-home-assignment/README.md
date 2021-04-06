@@ -21,7 +21,8 @@ You may use any layout. The Tahoe-LAFS team happens to like the
 
 3) Please make sure the website is accessible, maintainable and mobile-friendly. 
 The code should be clear to understand, navigate and modify for an engineer with 
-no web design experience.
+no web design experience.  Showcase any other skills, tools, or processes you think
+have a place in a website for a project like Tahoe-LAFS.
 
 NOTE: This assignment is NOT meant to be a redesign of our website! We understand 
 the limitations of what can be created in 2 hours.
