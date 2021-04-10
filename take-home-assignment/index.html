@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Tahoe-Lafs</title>
+		<meta name="title" content="Tahoe-Lafs" />
+		<meta
+			name="description"
+			content="Free and open decentralized cloud storage"
+		/>
+		<meta name="keywords" content="decentralized, cloud, storage" />
+		<meta name="robots" content="index, follow" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="language" content="English" />
+		<link rel="shortcut icon" type="image/png" href="/image/icon.png" />
+		<link
+			href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="./css/index.css" />
+	</head>
+
+	<body>
+		<!-- Navbar -->
+		<div class="navbar-area">
+			<div class="container">
+				<nav class="site-navbar">
+					<!-- site logo -->
+					<a href="https://sajith.github.io/tahoe-website/" class="site-logo">
+						<img
+							src="https://sajith.github.io/tahoe-website/theme/images/tahoe-logo.png"
+							class="logo"
+							alt="Logo"
+					/></a>
+
+					<!-- site menu/nav -->
+					<ul>
+						<li>
+							<a href="https://sajith.github.io/tahoe-website/category/news"
+								>News</a
+							>
+						</li>
+						<li>
+							<a href="https://tahoe-lafs.org/trac/tahoe-lafs">Trac</a>
+						</li>
+						<li>
+							<a href="https://github.com/tahoe-lafs/tahoe-lafs">Github</a>
+						</li>
+						<li>
+							<a href="https://tahoe-lafs.readthedocs.io/en/latest/">Docs</a>
+						</li>
+						<li>
+							<a href="#">Sponsor</a>
+						</li>
+					</ul>
+
+					<!-- nav-toggler for mobile version only -->
+					<button class="nav-toggler" aria-label="Tahoe">
+						<span></span>
+					</button>
+				</nav>
+			</div>
+		</div>
+		<script>
+			// define all UI variable
+			const navToggler = document.querySelector(".nav-toggler");
+			const navMenu = document.querySelector(".site-navbar ul");
+			const navLinks = document.querySelectorAll(".site-navbar a");
+			const entire = document.querySelector(".flow");
+
+			// load all event listners
+			allEventListners();
+
+			// functions of all event listners
+			function allEventListners() {
+				// toggler icon click event
+				navToggler.addEventListener("click", togglerClick);
+				// nav links click event
+				navLinks.forEach((elem) =>
+					elem.addEventListener("click", navLinkClick)
+				);
+			}
+
+			// togglerClick function
+			function togglerClick() {
+				navToggler.classList.toggle("toggler-open");
+				navMenu.classList.toggle("open");
+				if (navMenu.classList.contains("open")) {
+					entire.classList.add("seize");
+				} else {
+					entire.classList.remove("seize");
+				}
+			}
+
+			// navLinkClick function
+			function navLinkClick() {
+				if (navMenu.classList.contains("open")) {
+					navToggler.click();
+				}
+			}
+		</script>
+	</body>
+</html>
