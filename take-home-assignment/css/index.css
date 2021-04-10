@@ -45,6 +45,7 @@ h2 {
 	font-family: "Quicksand", sans-serif;
 }
 
+/* Navbar */
 .navbar-area {
 	background: darkgray;
 	position: fixed;
@@ -112,7 +113,121 @@ a.site-logo {
 	transform: translateY(-3px) rotate(-45deg);
 }
 
+/* Tahoe-Lafs Description */
+.logo {
+	width: 50%;
+}
+
+.data {
+	width: 50%;
+}
+.hero {
+	width: 50%;
+}
+.architecture {
+	width: 100%;
+}
+.banner {
+	background-color: #00000087;
+	padding: 152px 80px;
+}
+.side {
+	display: flex;
+	justify-content: space-between;
+
+	align-items: center;
+}
+.view {
+	margin-top: 60px;
+}
+
+.view a {
+	background-color: red;
+	padding: 16px 32px;
+	border-radius: 5px;
+}
+
+.hero h1 {
+	font: bold 40px "Open Sans", sans-serif;
+	margin-bottom: 20px;
+	text-align: left;
+	line-height: 50px;
+	color: white !important;
+}
+
+.hero p {
+	font: normal 18px "Open Sans", sans-serif;
+	margin-bottom: 40px;
+	text-align: center;
+	text-align: left;
+	line-height: 24px;
+	color: white !important;
+}
+.event-date {
+	margin: 0 0 0.25rem;
+	font-weight: bold;
+}
+.event-description {
+	margin: 0;
+}
+.tahoe {
+	color: black;
+	margin-top: 40px;
+	text-align: center;
+}
+.step {
+	--height: 7rem;
+	position: relative;
+	display: block;
+	background-color: hsl(calc(var(--hue) * 360 / 20), 90%, 65%);
+	border-color: hsl(calc(var(--hue) * 360 / 20), 90%, 65%);
+	padding: 1rem;
+	margin: 2rem 1.5rem;
+}
+.step::before {
+	content: "";
+	background-color: inherit;
+	position: absolute;
+	display: block;
+	width: var(--unit);
+	height: var(--unit);
+	top: 100%;
+	left: calc(50% - (var(--unit) / 2));
+}
+.step::after {
+	content: "";
+	color: #00000087;
+	position: absolute;
+	display: block;
+	top: calc(100% + var(--unit));
+	left: calc(50% - (var(--unit)));
+	border: var(--unit) solid transparent;
+	border-top-color: inherit;
+}
+li:last-child::before,
+li:last-child::after {
+	content: none;
+}
+.grid {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	padding: 60px;
+}
+.ordered {
+	margin-top: 2rem;
+}
+
+.packages .grid li {
+	padding: 50px;
+	flex-basis: 50%;
+	text-align: center;
+	background-color: #00000087;
+}
+
 @media screen and (max-width: 699px) {
+	/* Nabar media query */
 	.container {
 		max-width: 720px;
 	}
@@ -150,5 +265,130 @@ a.site-logo {
 	.site-navbar ul.open {
 		max-height: 100vh;
 		overflow: auto;
+	}
+	.banner {
+		padding: 100px 40px;
+	}
+	.side {
+		display: block;
+	}
+	.hero {
+		width: 100%;
+	}
+	.data {
+		width: 100%;
+	}
+	.hero h1 {
+		text-align: center;
+	}
+	.hero h3 {
+		text-align: center;
+	}
+	.view {
+		margin-bottom: 70px;
+		text-align: center;
+	}
+	.tahoe {
+		text-align: center;
+	}
+	.grid {
+		padding: 30px;
+	}
+}
+/* Tahoe-Lafs architecture */
+@media (min-width: 1000px) and (max-width: 1199px) {
+	li {
+		margin: 1rem;
+		width: calc(33.33% - 4rem);
+		float: left;
+		min-height: 7rem;
+	}
+	li:nth-child(6n + 4) {
+		float: right;
+	}
+	li:nth-child(6n + 1)::before,
+	li:nth-child(6n + 2)::before {
+		top: calc(var(--height) / 2 + var(--unit) / 2);
+		left: 100%;
+	}
+	li:nth-child(6n + 1)::after,
+	li:nth-child(6n + 2)::after {
+		top: 3.5rem;
+		left: calc(100% + (var(--unit)));
+		border: var(--unit) solid transparent;
+		border-left-color: inherit;
+	}
+	li:nth-child(6n + 4)::before {
+		top: calc(var(--height) / 2 + var(--unit) / 2);
+		left: -1rem;
+	}
+	li:nth-child(6n + 4)::after {
+		top: calc(var(--height) / 2);
+		left: -3rem;
+		border: var(--unit) solid transparent;
+		border-right-color: inherit;
+	}
+	.install {
+		height: 110px;
+	}
+}
+
+/* Tahoe-Lafs architecture */
+@media (min-width: 1200px) {
+	ol {
+		max-width: 1600px;
+		margin: 0 auto;
+	}
+	.step {
+		margin: 1rem;
+		width: calc(25% - 4rem);
+		float: left;
+		min-height: 7rem;
+	}
+	li:nth-child(8n + 5),
+	li:nth-child(8n + 6),
+	li:nth-child(8n + 7),
+	li:nth-child(8n + 8) {
+		float: right;
+	}
+	li:nth-child(8n + 1)::before,
+	li:nth-child(8n + 2)::before,
+	li:nth-child(8n + 3)::before {
+		top: calc(var(--height) / 2 + var(--unit) / 2);
+		left: 100%;
+	}
+	li:nth-child(8n + 1)::after,
+	li:nth-child(8n + 2)::after,
+	li:nth-child(8n + 3)::after {
+		top: calc(var(--height) / 2);
+		left: calc(100% + (var(--unit)));
+		border: var(--unit) solid transparent;
+		border-left-color: inherit;
+	}
+	li:nth-child(8n + 5)::before,
+	li:nth-child(8n + 6)::before,
+	li:nth-child(8n + 7)::before {
+		top: calc(var(--height) / 2 + var(--unit) / 2);
+		left: -1rem;
+	}
+	li:nth-child(8n + 5)::after,
+	li:nth-child(8n + 6)::after,
+	li:nth-child(8n + 7)::after {
+		top: calc(var(--height) / 2);
+		left: -3rem;
+		border: var(--unit) solid transparent;
+		border-right-color: inherit;
+	}
+}
+
+@media only screen and (min-width: 2000px) {
+	body,
+	nav {
+		max-width: 1500px;
+		margin: auto !important;
+		background-color: #80808026;
+	}
+	.__body {
+		margin: auto;
 	}
 }
