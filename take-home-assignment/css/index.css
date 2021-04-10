@@ -179,8 +179,6 @@ a.site-logo {
 	--height: 7rem;
 	position: relative;
 	display: block;
-	background-color: hsl(calc(var(--hue) * 360 / 20), 90%, 65%);
-	border-color: hsl(calc(var(--hue) * 360 / 20), 90%, 65%);
 	padding: 1rem;
 	margin: 2rem 1.5rem;
 }
@@ -226,8 +224,39 @@ li:last-child::after {
 	background-color: #00000087;
 }
 
+/* Tahoe-Lafs Documentation */
+.card-guide {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row;
+	padding: 100px 80px;
+}
+.card {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	transition: 0.3s;
+	width: 20%;
+}
+.install {
+	width: 100%;
+	height: 200px;
+}
+
+.card:hover {
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container {
+	padding: 10px 16px;
+}
+.doc {
+	text-align: center;
+}
+.container a {
+	color: black;
+	word-break: break-all;
+}
+
 @media screen and (max-width: 699px) {
-	/* Nabar media query */
 	.container {
 		max-width: 720px;
 	}
@@ -294,10 +323,35 @@ li:last-child::after {
 	.grid {
 		padding: 30px;
 	}
+
+	.card-guide {
+		display: block;
+		padding: 0 40px 30px 40px;
+	}
+	.card {
+		width: 100%;
+		margin-top: 40px;
+	}
 }
-/* Tahoe-Lafs architecture */
+
+@media (min-width: 700px) and (max-width: 770px) {
+	.packages .grid li {
+		padding: 20px;
+		min-width: 40%;
+	}
+	.install {
+		height: 88px;
+	}
+	.banner {
+		padding: 140px 40px;
+	}
+	.card-guide {
+		padding: 100px 40px;
+	}
+}
+
 @media (min-width: 1000px) and (max-width: 1199px) {
-	li {
+	.step {
 		margin: 1rem;
 		width: calc(33.33% - 4rem);
 		float: left;
@@ -328,12 +382,12 @@ li:last-child::after {
 		border: var(--unit) solid transparent;
 		border-right-color: inherit;
 	}
+
 	.install {
 		height: 110px;
 	}
 }
 
-/* Tahoe-Lafs architecture */
 @media (min-width: 1200px) {
 	ol {
 		max-width: 1600px;
