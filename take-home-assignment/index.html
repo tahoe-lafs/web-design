@@ -62,43 +62,74 @@
 				</nav>
 			</div>
 		</div>
+
+		<section class="flow">
+			<!-- Tahoe-Lafs description -->
+			<div class="banner">
+				<div class="side">
+					<div class="hero">
+						<h1>The Least-Authority File Store</h1>
+						<p>
+							Tahoe-LAFS is a Free and Open decentralized cloud storage system.
+							It distributes your data across multiple servers. Even if some of
+							the servers fail or are taken over by an attacker, the entire file
+							store continues to function correctly, preserving your privacy and
+							security.
+						</p>
+						<div class="view">
+							<a
+								href="https://tahoe-lafs.org/trac/tahoe-lafs/browser/trunk/docs/about.rst"
+								>View More</a
+							>
+						</div>
+					</div>
+					<div class="data">
+						<img
+							src="/image/LAFS.svg"
+							class="architecture"
+							alt="architecture"
+						/>
+					</div>
+				</div>
+			</div>
+		</section>
 		<script>
 			// define all UI variable
 			const navToggler = document.querySelector(".nav-toggler");
 			const navMenu = document.querySelector(".site-navbar ul");
 			const navLinks = document.querySelectorAll(".site-navbar a");
-			const entire = document.querySelector(".flow");
+			const body = document.querySelector(".flow");
 
-			// load all event listners
-			allEventListners();
-
-			// functions of all event listners
-			function allEventListners() {
+			// functions of all event listeners
+			const allEventListners = () => {
 				// toggler icon click event
 				navToggler.addEventListener("click", togglerClick);
 				// nav links click event
 				navLinks.forEach((elem) =>
 					elem.addEventListener("click", navLinkClick)
 				);
-			}
+			};
 
 			// togglerClick function
-			function togglerClick() {
+			const togglerClick = () => {
 				navToggler.classList.toggle("toggler-open");
 				navMenu.classList.toggle("open");
 				if (navMenu.classList.contains("open")) {
-					entire.classList.add("seize");
+					body.classList.add("seize");
 				} else {
-					entire.classList.remove("seize");
+					body.classList.remove("seize");
 				}
-			}
+			};
 
 			// navLinkClick function
-			function navLinkClick() {
+			const navLinkClick = () => {
 				if (navMenu.classList.contains("open")) {
 					navToggler.click();
 				}
-			}
+			};
+
+			// load all event listners
+			allEventListners();
 		</script>
 	</body>
 </html>
