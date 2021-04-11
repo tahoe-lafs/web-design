@@ -13,3 +13,11 @@ const isMobileMenu = () => {
 };
 
 isMobileMenu();
+
+menuTrigger &&
+  menuTrigger.addEventListener(
+    "click",
+    () => menu && menu.classList.toggle("hidden")
+  );
+
+window.addEventListener("resize", isMobileMenu);
