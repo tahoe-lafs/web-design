@@ -1,0 +1,190 @@
+html {
+  scroll-behavior: smooth; /* smooth scrolling natively via CSS */
+  font-size: 1rem;
+  line-height: 1.4; /* good line height for the Roboto font I've set as default */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+b,
+strong {
+  font-weight: bolder; /* helps make the font bolder on Webkit based browsers */
+}
+
+[hidden] {
+  display: none; /* Fixes for older IE browsers */
+}
+
+.hidden,
+[hidden] {
+  display: none !important; /* class used to hide content */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Helvetica, sans-serif;
+  text-rendering: optimizeLegibility; /* Helps a lot on Retina displays */
+  -webkit-font-smoothing: antialiased;
+  font-feature-settings: "liga", "tnum", "case", "calt", "zero", "ss01", "locl";
+  -webkit-overflow-scrolling: touch;
+  -webkit-text-size-adjust: 100%;
+
+  display: flex; /* Flexbox used for the body to help make the footer stick to the bottom of the screen when zoomed in or out */
+  min-height: 100vh;
+  flex-direction: column;
+
+  flex: 1 auto;
+  flex-direction: column; /* items flow from up to bottom */
+}
+
+.content {
+  display: flex; /* the main content area, only placeholder, not a wrapper */
+  flex-direction: column;
+  flex: 1 auto;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+a {
+  color: #bf6161;
+}
+
+a:hover {
+  color: #bf2500;
+}
+
+main {
+  /* the real wrapper for the whole main page content */
+  width: 100%;
+  max-width: 900px; /* good max-width for current most popular screen sizes */
+  text-align: left; /* we set the text to be left-aligned and change it on request later on */
+  padding: 20px; /* padding for mobile view */
+  margin: 0 auto; /* content is now centered in the page */
+}
+
+header {
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 20px;
+}
+
+header > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* sets the logo and the nav apart */
+  margin: 0 auto;
+  width: 900px; /* preset width to the max-width of the main content */
+  max-width: 100%;
+}
+
+header > div > div {
+  display: flex;
+  flex-direction: row; /* makes the navbar wrapper ready and sets its contents to be in a row */
+  align-items: center;
+}
+
+nav ul {
+  display: flex; /* navbar elements are flexed */
+  align-items: center;
+  justify-content: flex-start;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+  font-size: 1rem;
+  font-weight: bold;
+  list-style: none; /* removes bullet points */
+}
+
+nav ul li {
+  margin: 0 12px; /* every item in the navbar has some margins from the rest */
+}
+
+nav ul li:last-of-type {
+  margin-right: 0; /* the last item on the navbar has no margin on the right */
+}
+
+nav a {
+  display: inline-block;
+  margin-right: 15px;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline; /* underlines on hover */
+}
+
+nav a:last-of-type {
+  margin-right: 0;
+}
+
+.trigger {
+  /* the hamburger menu item, only visible on mobile */
+  width: 24px;
+  height: 24px;
+  fill: #333;
+  margin-left: 10px; /* some spacing from the navbar */
+  cursor: pointer;
+  display: none; /* hidden by default to prevent flashes */
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc; /* we make the horizontal line more preminent */
+  margin: 1em 0;
+  padding: 0;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle; /* middle aligns all the media content to their parent div */
+}
+
+/* Classes for accessibility purposes and screen readers */
+
+.sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.sr-only.focusable:active,
+.sr-only.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+footer {
+  padding: 40px 20px; /* big padding to distinguish it from the rest of the page */
+  flex-grow: 0; /* this sticks the footer to the bottom of the screen at all times */
+}
