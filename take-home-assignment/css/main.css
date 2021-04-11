@@ -4,6 +4,11 @@ html {
   line-height: 1.4; /* good line height for the Roboto font I've set as default */
 }
 
+:root {
+  --phoneWidth: (max-width: 684px); /* used for media queries/mobile menu */
+  --tabletWidth: (max-width: 900px);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -185,6 +190,46 @@ video {
 }
 
 footer {
+  width: 100%;
+  max-width: 900px;
+  text-align: left;
+  margin: 0 auto;
+  font-size: 85%;
+  font-style: italic;
   padding: 40px 20px; /* big padding to distinguish it from the rest of the page */
   flex-grow: 0; /* this sticks the footer to the bottom of the screen at all times */
+}
+
+@media only screen and (max-width: 684px) {
+  /* arbitrarly picked screen width to enter mobile/tablet view */
+  nav {
+    background: #fff;
+    position: absolute;
+    top: 66px;
+    right: 20px;
+    border: 2px solid #333;
+    margin: 0;
+    padding: 10px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
+  }
+
+  nav ul li {
+    margin: 0;
+    padding: 5px;
+  }
+
+  .trigger {
+    /* the hamburger menu item, only visible on mobile */
+    width: 24px;
+    height: 24px;
+    fill: #333;
+    margin-left: 10px; /* some spacing from the navbar */
+    cursor: pointer;
+    display: block; /* hidden by default to prevent flashes */
+  }
 }
