@@ -2,6 +2,9 @@ html {
   scroll-behavior: smooth; /* smooth scrolling natively via CSS */
   font-size: 1rem;
   line-height: 1.4; /* good line height for the Roboto font I've set as default */
+  margin-left: calc(
+    100vw - 100%
+  ); /* this line fixes content displacement if there is no scrollbar visible */
 }
 
 :root {
@@ -187,6 +190,12 @@ li {
 
 img {
   max-width: 100%;
+}
+
+marker {
+  background-color: #bf6161;
+  padding: 1px 2px;
+  color: #fff;
 }
 
 /* Classes for accessibility purposes and screen readers */
