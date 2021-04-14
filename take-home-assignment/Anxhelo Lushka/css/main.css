@@ -2,9 +2,6 @@ html {
   scroll-behavior: smooth; /* smooth scrolling natively via CSS */
   font-size: 1rem;
   line-height: 1.4; /* good line height for the Roboto font I've set as default */
-  margin-left: calc(
-    100vw - 100%
-  ); /* this line fixes content displacement if there is no scrollbar visible */
 }
 
 :root {
