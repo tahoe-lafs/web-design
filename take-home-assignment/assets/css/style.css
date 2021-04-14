@@ -30,4 +30,12 @@ a:hover{
 }
 .list-item {
     list-style: none;
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: 1.125rem;
+    padding-left: 1.875rem;
+    
+}
+.list-item--custom {
+    background-image: url('../img/bullet.png'); 
 }
