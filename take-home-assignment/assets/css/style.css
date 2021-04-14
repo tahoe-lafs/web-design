@@ -1,0 +1,26 @@
+/* overide bootstrap defaults */
+body {
+    background:#FEF9F9;
+    padding: 3rem 1.5rem;
+    color: #070707;
+}
+a {
+    color: #ff0000;
+}
+a:hover{
+    color: #bb0000;
+}
+.btn-primary{
+    background: #ff0000;
+    border-color: #ff0000;
+}
+.btn-primary:hover{
+    background: #bb0000;
+    border-color: #bb0000;
+}
+
+/* nav */
+.nav-item {
+    font-size: 1rem;
+    text-transform: uppercase;
+}
